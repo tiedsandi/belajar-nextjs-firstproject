@@ -11,7 +11,6 @@ function ClientsPage() {
         { id: 'manu', name: 'manu' }
     ];
 
-
     return (
         <div>
             <h1>The Clients Page</h1>
