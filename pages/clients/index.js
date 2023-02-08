@@ -17,15 +17,12 @@ function ClientsPage() {
             <h1>The Clients Page</h1>
             <Link href='/'>Back</Link>
             <ul>
-                {/* <li>
-                    <Link href='/clients/max'>Maximum</Link>
-                </li>
-                <li>
-                    <Link href='/clients/man'>Manuel</Link>
-                </li> */}
                 {clients.map((client) => (
                     <li key={client.id}>
-                        <Link href={`/clients/${client.id}`} >
+                        <Link href={{
+                            pathname: '/clients/[id]', //[id] harus sama kaya foldernya
+                            query: { id: client.id }
+                        }} >
                             {client.name}
                         </Link>
                     </li>
